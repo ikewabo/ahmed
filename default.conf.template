@@ -1,0 +1,15 @@
+server {
+    listen ${PORT};
+    server_name localhost;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Enable byte ranges for media streaming
+    location ~* \.(mp4|webm|ogg|mp3|wav)$ {
+        root /usr/share/nginx/html;
+    }
+}

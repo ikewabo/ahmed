@@ -1,0 +1,4 @@
+.git
+.gitignore
+Dockerfile
+default.conf.template
